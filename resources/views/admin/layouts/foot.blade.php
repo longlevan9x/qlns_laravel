@@ -28,7 +28,10 @@
         <script src="{{asset('assets/layouts/layout/scripts/layout.min.js')}}" type="text/javascript"></script>
         <script src="{{asset('assets/layouts/layout/scripts/demo.min.js')}}" type="text/javascript"></script>
         <script src="{{asset('assets/layouts/global/scripts/quick-sidebar.min.js')}}" type="text/javascript"></script>
+
+        <script src="{{asset('js/customs.js')}}" type="text/javascript"></script>
         <script src="{{asset('js/validations.js')}}" type="text/javascript"></script>
+        <script src="{{asset('js/input-file.js')}}" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
         <script type="text/javascript" charset="utf-8">
             

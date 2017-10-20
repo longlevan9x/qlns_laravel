@@ -58,6 +58,18 @@
                                 <div class="form-control-focus"> </div>
                             </div>
                         </div>
+                        </div>
+                        <div class="form-group form-md-line-input">
+                            <label class="col-md-3 control-label" for="form_control_1">Upload Image
+                                <span class="required">*</span>
+                            </label>
+                            <div class="col-md-9">
+                                <span class="btn btn-default btn-file">
+                                    <i class="fa fa-upload"></i> Browse<input type="file" image="image" id="imgInp" class="upload-one-file">
+                                </span>
+                                <div class="form-control-focus"> </div>
+                            </div>
+                        </div>
                         <div class="form-group form-md-line-input">
                             <label class="col-md-3 control-label" for="form_control_1">Number
                                 <span class="required">*</span>

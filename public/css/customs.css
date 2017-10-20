@@ -1,0 +1,12 @@
+.show-text-file{
+    width: 83% !important;
+	display: inline-block;
+    border-bottom: 1px solid #c2cad8 !important;
+    float: none !important;
+}
+.image-preview-clear{
+	display: none;
+    position: absolute;
+    top: 0;
+    left: 13.1%;
+}
