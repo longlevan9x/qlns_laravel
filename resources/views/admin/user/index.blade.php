@@ -18,6 +18,7 @@
                     </div>
                 </div>
             </div>
+            {!!WidgetAlert::show(false)!!}
             <div class="portlet-body">
                 <div class="table-toolbar">
                     <div class="row">

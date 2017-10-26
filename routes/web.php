@@ -24,6 +24,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin\\'], function () {
     Route::group(['prefix' => 'user'], function() {
 	    Route::get('index', 'UserController@index');
 	    Route::get('create', 'UserController@create');
+	    Route::post('store', 'UserController@store');
     });
     
 });

@@ -4,9 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\UserRequest;
+use App\Models\User;
 class UserController extends Controller
 {
+    public $user;
+    public function __construct(User $user)
+    {
+        return $this->user = $user;   
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +31,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.user.create');
+        return view('admin.user.create', ['model' => $this->user]);
     }
 
     /**
@@ -33,9 +40,12 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        //
+        if ($this->user->createUser($request)) {
+            return redirect('admin/user')->with('success', 'Create success');
+        }
+        return redirect('admin/user/create')->with('error', 'Create error');
     }
 
     /**

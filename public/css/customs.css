@@ -1,5 +1,7 @@
+/*UPlaod load file*/
 .show-text-file{
-    width: 83% !important;
+    width: 85% !important;
+    margin-left: 1%;
 	display: inline-block;
     border-bottom: 1px solid #c2cad8 !important;
     float: none !important;
@@ -9,4 +11,113 @@
     position: absolute;
     top: 0;
     left: 13.1%;
+}
+
+/*-------------------*/
+
+/*Alert widget*/
+/* .item  */.alert {
+    opacity: 1 !important;
+    margin: 5px 0 0 15px;
+    border-radius: 4px !important;
+    width: 97%;
+}
+
+/* .item  */.alert::after {
+    /* display: ; */
+    border-color: transparent transparent #CE5454;
+    border-width: 8px 11px;
+    left: 0px;
+    top: -13px;
+}
+
+.alert-primary {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+
+.alert-warning {
+    color: #333399 !important;
+}
+
+.alert-info {
+    color: #2A3F54 !important;
+}
+
+.alert-errors, .alert-error {
+    background-color: #EE6363;
+}
+.alert-default {
+    color: #333;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.vertical-middle {
+    vertical-align: middle !important;
+}
+
+.vertical-bottom {
+    vertical-align: bottom !important;
+}
+
+.vertical-top {
+    vertical-align: top !important;
+}
+
+
+
+.bulk_action tr th:first-child{
+    width: 30px !important;
+}
+
+input[type=checkbox]{
+    display: block !important;
+    width: 1.4em !important;
+    height: 1.4em !important;
+}
+
+.x_content .dropdown-menu a{
+    padding: 8px 16px !important;
+    color: #6f6f6f !important;
+    text-decoration: none !important;
+    display: block !important;
+    clear: both !important;
+    font-weight: 300 !important;
+    line-height: 18px !important;
+    white-space: nowrap !important;
+    font-size: 14px;
+}
+.x_content .dropdown-menu{
+    border-radius: 0 !important;
+}
+
+/*-------------------------*/
+
+
+/* Custom */
+.control-label{
+    text-align: left !important;
+}
+
+.form-horizontal .select2-container--bootstrap .select2-selection {
+    border: none;
+    border-bottom: 1px solid #c2cad8;
+}
+
+.validations label.form-control-focus{
+    top: 35px !important;
+    font-size: 13px !important;
+    filter: alpha(opacity=0);
 }

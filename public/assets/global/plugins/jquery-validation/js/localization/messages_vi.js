@@ -11,11 +11,11 @@
  * Locale: VI (Vietnamese; Tiếng Việt)
  */
 $.extend($.validator.messages, {
-	required: "Hãy nhập.",
+	required: "Trường này không được để trống.",
 	remote: "Hãy sửa cho đúng.",
-	email: "Hãy nhập email.",
-	url: "Hãy nhập URL.",
-	date: "Hãy nhập ngày.",
+	email: "Hãy nhập đúng email.",
+	url: "Hãy nhập đúng URL.",
+	date: "Hãy nhập đúng ngày.",
 	dateISO: "Hãy nhập ngày (ISO).",
 	number: "Hãy nhập số.",
 	digits: "Hãy nhập chữ số.",

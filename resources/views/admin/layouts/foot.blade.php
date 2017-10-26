@@ -24,18 +24,23 @@
         <script src="{{asset('assets/pages/scripts/dashboard.min.js')}}" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <script src="{{asset('assets/pages/scripts/form-validation-md.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('assets/global/plugins/select2/js/select2.full.min.js')}}" type="text/javascript"></script>
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="{{asset('assets/layouts/layout/scripts/layout.min.js')}}" type="text/javascript"></script>
         <script src="{{asset('assets/layouts/layout/scripts/demo.min.js')}}" type="text/javascript"></script>
         <script src="{{asset('assets/layouts/global/scripts/quick-sidebar.min.js')}}" type="text/javascript"></script>
-
+        <script src="{{asset('assets/global/plugins/jquery-validation/js/localization/messages_vi.js')}}" type="text/javascript" ></script>
         <script src="{{asset('js/customs.js')}}" type="text/javascript"></script>
         <script src="{{asset('js/validations.js')}}" type="text/javascript"></script>
         <script src="{{asset('js/input-file.js')}}" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
         <script type="text/javascript" charset="utf-8">
-            
+            /*add  csrf_token to form*/
+            var _token = $('form').find('input[name="_token"]');
+            if (_token.length == 0 || typeof _token == 'undefined') {
+                $('form').append('<input type="hidden" name="_token" value="{{ csrf_token() }}">');
+            }
+            /*-------------------------*/
         </script>
     </body>
-
 </html>
