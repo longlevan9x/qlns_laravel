@@ -36,9 +36,7 @@ $(document).ready(function() {
                     var input_file = $(this).find("input:file");
                     if (input_file.hasClass('upload-one-file')) {
                         var parent = input_file.parent();
-                        parent.after("<img id='img-upload'/>");
                         parent.after('<input class="form-control show-text-file" readonly >');
-                        // parent.after('<span class="form-control show-text-file"></span>');
                         parent.after('<button type="button" class="btn btn-default image-preview-clear"><span class="glyphicon glyphicon-remove"></span> Clear </button>');
                         parent.parent().addClass('input-group');
                     }

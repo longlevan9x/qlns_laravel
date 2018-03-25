@@ -1,7 +1,11 @@
 $(document).ready( function() {
     $(document).on('change', '.btn-file :file', function() {
-        var input = $(this),
-            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+        var input = $(this);
+        // var label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+        var label = "";
+        for (let i = 0; i < input[0].files.length; i++) {
+            label += input[0].files[i].name + ", ";
+        }
         input.trigger('fileselect', [label]);
     });
 
@@ -24,14 +28,17 @@ $(document).ready( function() {
     });
 
     function readURL(input) {
-        if (input.files && input.files[0]) {
+        $("img[id*='img-upload']").remove();
+        for (let i = 0; i < input.files.length; i++) {
+            var parent = $(input).parents('.input-group');
+
+            parent.append(`<img id='img-upload${i}'/>`);
             var reader = new FileReader();
             
             reader.onload = function (e) {
-                $('#img-upload').attr('src', e.target.result);
+                $(`#img-upload${i}`).attr('src', e.target.result);
             }
-            
-            reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input.files[i]);
         }
     }
 
@@ -43,7 +50,7 @@ $(document).ready( function() {
     $(document).on('click', '.image-preview-clear', function(event) {
         event.preventDefault();
         /* Act on the event */
-        $('#img-upload').removeAttr('src');
+        $("img[id*='img-upload']").remove();
         $('input:file').val('');
         $('.show-text-file').val("");
         $(this).hide('slow');

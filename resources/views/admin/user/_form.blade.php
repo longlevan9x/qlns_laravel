@@ -100,7 +100,7 @@
             {!!Form::label('image', '', ['class'=>'col-md-2 control-label'])!!}
             <div class="col-md-10">
                 <span class="btn btn-default btn-file">
-                    <i class="fa fa-upload"></i> Browse {!!Form::file('image',['class'=>"form-control upload-one-file"])!!}
+                    <i class="fa fa-upload"></i> Browse {!!Form::file('image[]',['class'=>"form-control upload-one-file"])!!}
                 </span>
             </div>
         </div>

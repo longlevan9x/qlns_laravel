@@ -25,10 +25,15 @@ class UploadFile
 		}
 		if ($request->hasFile($value)) {
 			$file      = $request->file($value);
-            $extension = $file->getClientOriginalExtension($value);
-			$file_name = time() . '-' . rand(0, 1000) ."-" .self::start()->controller .".".$extension;
-			$file->move(self::start()->destination_path, $file_name);
-            return $file_name;
+			if (is_array($file)) {
+				
+			} else {
+	            $extension = $file->getClientOriginalExtension($value);
+				$file_name = time() . '-' . rand(0, 1000) ."-" .self::start()->controller .".".$extension;
+				$file->move(self::start()->destination_path, $file_name);
+	            return $file_name;
+			}
+			
 		}
 		else {
 			return '';
